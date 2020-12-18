@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import './Paginator.css';
+import './Paginator.css'
 
 const paginator = props => (
   <div className="paginator">
@@ -18,6 +18,6 @@ const paginator = props => (
       )}
     </div>
   </div>
-);
+)
 
-export default paginator;
+export default paginator

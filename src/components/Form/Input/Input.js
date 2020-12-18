@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import './Input.css';
+import './Input.css'
 
 const input = props => (
   <div className="input">
@@ -35,6 +35,6 @@ const input = props => (
       />
     )}
   </div>
-);
+)
 
-export default input;
+export default input

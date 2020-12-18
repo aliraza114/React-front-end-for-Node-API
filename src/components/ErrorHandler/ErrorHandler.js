@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from 'react'
 
-import Backdrop from '../Backdrop/Backdrop';
-import Modal from '../Modal/Modal';
+import Backdrop from '../Backdrop/Backdrop'
+import Modal from '../Modal/Modal'
 
 const errorHandler = props => (
   <Fragment>
@@ -17,6 +17,6 @@ const errorHandler = props => (
       </Modal>
     )}
   </Fragment>
-);
+)
 
-export default errorHandler;
+export default errorHandler

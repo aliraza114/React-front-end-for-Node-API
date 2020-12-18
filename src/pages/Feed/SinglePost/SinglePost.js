@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import Image from '../../../components/Image/Image';
-import './SinglePost.css';
+import Image from '../../../components/Image/Image'
+import './SinglePost.css'
 
 class SinglePost extends Component {
   state = {
@@ -10,10 +10,10 @@ class SinglePost extends Component {
     date: '',
     image: '',
     content: ''
-  };
+  }
 
   componentDidMount() {
-    const postId = this.props.match.params.postId;
+    const postId = this.props.match.params.postId
     const graphqlQuery = {
       query: `query FetchSinglePost($postId: ID!) {
           post(id: $postId) {
@@ -30,7 +30,7 @@ class SinglePost extends Component {
       variables: {
         postId: postId
       }
-    };
+    }
     fetch('http://localhost:8080/graphql', {
       method: 'POST',
       headers: {
@@ -40,11 +40,11 @@ class SinglePost extends Component {
       body: JSON.stringify(graphqlQuery)
     })
       .then(res => {
-        return res.json();
+        return res.json()
       })
       .then(resData => {
         if (resData.errors) {
-          throw new Error('Fetching post failed!');
+          throw new Error('Fetching post failed!')
         }
         this.setState({
           title: resData.data.post.title,
@@ -52,11 +52,11 @@ class SinglePost extends Component {
           image: 'http://localhost:8080/' + resData.data.post.imageUrl,
           date: new Date(resData.data.post.createdAt).toLocaleDateString('en-US'),
           content: resData.data.post.content
-        });
+        })
       })
       .catch(err => {
-        console.log(err);
-      });
+        console.log(err)
+      })
   }
 
   render() {
@@ -71,8 +71,8 @@ class SinglePost extends Component {
         </div>
         <p>{this.state.content}</p>
       </section>
-    );
+    )
   }
 }
 
-export default SinglePost;
+export default SinglePost

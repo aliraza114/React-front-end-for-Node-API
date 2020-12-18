@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from 'react'
 
-import './Layout.css';
+import './Layout.css'
 
 const layout = props => (
   <Fragment>
@@ -8,6 +8,6 @@ const layout = props => (
     {props.mobileNav}
     <main className="content">{props.children}</main>
   </Fragment>
-);
+)
 
-export default layout;
+export default layout

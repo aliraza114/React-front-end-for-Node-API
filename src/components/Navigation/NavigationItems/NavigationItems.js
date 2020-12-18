@@ -1,13 +1,13 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-import './NavigationItems.css';
+import './NavigationItems.css'
 
 const navItems = [
   { id: 'feed', text: 'Feed', link: '/', auth: true },
   { id: 'login', text: 'Login', link: '/', auth: false },
   { id: 'signup', text: 'Signup', link: '/signup', auth: false }
-];
+]
 
 const navigationItems = props => [
   ...navItems.filter(item => item.auth === props.isAuth).map(item => (
@@ -25,6 +25,6 @@ const navigationItems = props => [
       <button onClick={props.onLogout}>Logout</button>
     </li>
   )
-];
+]
 
-export default navigationItems;
+export default navigationItems

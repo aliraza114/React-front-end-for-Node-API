@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import Input from '../../components/Form/Input/Input';
-import Button from '../../components/Button/Button';
-import { required, length, email } from '../../util/validators';
-import Auth from './Auth';
+import Input from '../../components/Form/Input/Input'
+import Button from '../../components/Button/Button'
+import { required, length, email } from '../../util/validators'
+import Auth from './Auth'
 
 class Login extends Component {
   state = {
@@ -22,13 +22,13 @@ class Login extends Component {
       },
       formIsValid: false
     }
-  };
+  }
 
   inputChangeHandler = (input, value) => {
     this.setState(prevState => {
-      let isValid = true;
+      let isValid = true
       for (const validator of prevState.loginForm[input].validators) {
-        isValid = isValid && validator(value);
+        isValid = isValid && validator(value)
       }
       const updatedForm = {
         ...prevState.loginForm,
@@ -37,17 +37,17 @@ class Login extends Component {
           valid: isValid,
           value: value
         }
-      };
-      let formIsValid = true;
+      }
+      let formIsValid = true
       for (const inputName in updatedForm) {
-        formIsValid = formIsValid && updatedForm[inputName].valid;
+        formIsValid = formIsValid && updatedForm[inputName].valid
       }
       return {
         loginForm: updatedForm,
         formIsValid: formIsValid
-      };
-    });
-  };
+      }
+    })
+  }
 
   inputBlurHandler = input => {
     this.setState(prevState => {
@@ -59,9 +59,9 @@ class Login extends Component {
             touched: true
           }
         }
-      };
-    });
-  };
+      }
+    })
+  }
 
   render() {
     return (
@@ -101,8 +101,8 @@ class Login extends Component {
           </Button>
         </form>
       </Auth>
-    );
+    )
   }
 }
 
-export default Login;
+export default Login

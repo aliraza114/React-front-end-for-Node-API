@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import './Input.css';
+import './Input.css'
 
 const filePicker = props => (
   <div className="input">
@@ -16,6 +16,6 @@ const filePicker = props => (
       onBlur={props.onBlur}
     />
   </div>
-);
+)
 
-export default filePicker;
+export default filePicker

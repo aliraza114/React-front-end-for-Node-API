@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import './Button.css';
+import './Button.css'
 
 const button = props =>
   !props.link ? (
@@ -28,6 +28,6 @@ const button = props =>
     >
       {props.children}
     </Link>
-  );
+  )
 
-export default button;
+export default button

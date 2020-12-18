@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import Image from './Image';
-import './Avatar.css';
+import Image from './Image'
+import './Avatar.css'
 
 const avatar = props => (
   <div
@@ -10,6 +10,6 @@ const avatar = props => (
   >
     <Image imageUrl={props.image} />
   </div>
-);
+)
 
-export default avatar;
+export default avatar

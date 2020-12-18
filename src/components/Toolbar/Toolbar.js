@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import './Toolbar.css';
+import './Toolbar.css'
 
 const toolbar = props => (
     <div className="toolbar">
-       {props.children}
+        {props.children}
     </div>
-);
+)
 
-export default toolbar;
+export default toolbar

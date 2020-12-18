@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import './Image.css';
+import './Image.css'
 
 const image = props => (
   <div
@@ -11,6 +11,6 @@ const image = props => (
       backgroundPosition: props.left ? 'left' : 'center'
     }}
   />
-);
+)
 
-export default image;
+export default image

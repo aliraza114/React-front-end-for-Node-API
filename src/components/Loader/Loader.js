@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import './Loader.css';
+import './Loader.css'
 
 const loader = props => (
   <div className="loader">
@@ -9,6 +9,6 @@ const loader = props => (
     <div />
     <div />
   </div>
-);
+)
 
-export default loader;
+export default loader
